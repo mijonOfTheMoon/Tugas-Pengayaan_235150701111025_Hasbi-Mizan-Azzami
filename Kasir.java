@@ -198,13 +198,12 @@ public class Kasir {
                     nomorMeja = scanner.nextInt();
                     scanner.nextLine();
 
-                    if (daftarMeja[nomorMeja - 1].getPelanggan() == null) {
-                        System.out.println("Meja " + nomorMeja + " tidak terisi oleh pelanggan");                        
-                    } else if (daftarMeja[nomorMeja - 1].getMenu()[0] == null) {
+                    if (daftarMeja[nomorMeja - 1].getMenu()[0] == null) {
                         System.out.println("Meja " + nomorMeja + " tidak memiliki pesanan");
                     } else {
-                        System.out.println("Harga pesanan di meja " + nomorMeja + " adalah " + hitungHargaPesanan(nomorMeja));
-                        
+                        System.out.println(
+                                "Harga pesanan di meja " + nomorMeja + " adalah " + hitungHargaPesanan(nomorMeja));
+
                     }
                     break;
                 case 6:
@@ -214,7 +213,7 @@ public class Kasir {
                     nomorMeja = scanner.nextInt();
                     scanner.nextLine();
 
-                    if (daftarMeja[nomorMeja - 1].getMenu().length == 0) {
+                    if (daftarMeja[nomorMeja - 1].getMenu()[0] == null) {
                         System.out.println("Meja " + nomorMeja + " tidak memiliki pesanan");
                     } else {
                         tampilkanPesanan(nomorMeja);
